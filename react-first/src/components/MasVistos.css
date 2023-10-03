@@ -1,0 +1,33 @@
+.mas-vistos {
+    height: 487px;
+    width: 1897px;
+  }
+  
+  .mas-vistos .overlap-group {
+    height: 488px;
+    position: relative;
+    top: -1px;
+  }
+  
+  .mas-vistos .frame-5 {
+    height: 416px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 72px !important;
+    width: 1897px !important;
+  }
+  
+  .mas-vistos .text-wrapper {
+    color: #ffffff;
+    font-family: "Imbue-Regular", Helvetica;
+    font-size: 60px;
+    font-weight: 400;
+    left: 721px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 452px;
+  }
+  
