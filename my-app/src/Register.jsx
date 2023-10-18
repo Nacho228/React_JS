@@ -44,7 +44,7 @@ export const Register = (props) => {
           />
           <br /><br />
           <button class="register-button">Register</button>
-          <button onClick={() => props.onFormSwitch('login')}>Already have an account? Login</button>
+          <button type="button" onClick={() => props.onFormSwitch('login')}>Already have an account? Login</button>
         </form>
       </div>
     </div>
