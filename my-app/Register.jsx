@@ -13,12 +13,12 @@ export const Register = (props) => {
     return (
         <div className="auth-form-container">
         <form onSubmit={handleSumbit}> 
-            <label htmlFor="Name">tu nombre fiera?</label>
+            <label htmlFor="Name">Name</label>
             <input type="name" name="name" id="name" placeholder="Full name"/>
             <label htmlFor="sad">Email</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="ssssssaaaa" id="email"/>
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="Your email" id="email"/>
             <label htmlFor="password">Password</label>
-            <input value={pass} onChange={(e => setPass(e.target.value))} type="password" placeholder="*.*"name="password" id="password" />
+            <input value={pass} onChange={(e => setPass(e.target.value))} type="password" placeholder="Your password"name="password" id="password" />
             <button>Register</button>
         </form>
         <button onClick={() => props.onFormSwitch('login')}>Already have an account? Login</button>
