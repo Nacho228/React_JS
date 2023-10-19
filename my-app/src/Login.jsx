@@ -22,7 +22,6 @@ export const Login = (props) => {
             placeholder="Your email"
             id="email"
           />
-          <br />
           <label htmlFor="password">Password</label>
           <input
             value={pass}
@@ -32,7 +31,6 @@ export const Login = (props) => {
             name="password"
             id="password"
           />
-          <br />
           <button class="login-button">Log in</button>
           <br></br>
         </form>

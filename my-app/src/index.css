@@ -128,3 +128,54 @@ input[type="password"] {
   background-color: #2E7D32;
   border-color: #2E7D32;
 }
+
+.buttons-container {
+  text-align: right;
+  margin-right: 35px;
+}
+
+.news-bar {
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #3a0d0d;
+  margin-top: 5px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.custom-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.centered-buttons {
+  display: inline-block;
+}
+
+.centered-buttons button {
+  margin-right: 10px;
+}
+
+.custom-button:hover {
+  background-color: #333;
+}
+
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo-container img {
+  width: 200px;
+}
+
+.heart-icon {
+  width: 20px;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
