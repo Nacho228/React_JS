@@ -12,6 +12,7 @@ export const Register = (props) => {
 
   return (
     <div className="popup-container">
+      <button onClick={props.goToHomePage}>Go back to home</button>
       <div className="popup-content">
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
