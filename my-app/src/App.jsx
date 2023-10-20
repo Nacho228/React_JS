@@ -7,6 +7,13 @@ import heart from '../src/hearth.png';
 
 
 function App() {
+
+  const [currentTheme, setCurrentTheme] = useState('dark');
+
+  const toggleTheme = () => {
+    setCurrentTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  };
+
   const [currentForm, setCurrentForm] = useState(null);
 
   const showLoginForm = () => {
@@ -27,32 +34,34 @@ function App() {
 
   return (
     <div>
-      <div className="logo-container">
-        <img src={logo} alt="Logo" />
-      </div>
-      <div className="flex items-center justify-center h-screen">
-
-        <div className="homepage-container">
-          <div className="buttons-container">
-            
-            <div className="centered-buttons">
-            <button className='custom-button'>Ellos</button>
-            <button className='custom-button' >Unisex</button>
-            <button className='custom-button' >Ellas</button>
-            </div>
-            <img src={heart} alt="Heart" className="heart-icon" />
-            <button className='custom-button' onClick={showRegisterForm}>SIGN UP</button>
-            <button className='custom-button' onClick={showLoginForm}>LOGIN</button>
-          </div>
-          <div className='news-bar'>Discover What's New</div>
-          <div className="auth-form-container">
-            {currentForm === 'login' ? <Login onFormSwitch={showRegisterForm} goToHomePage={goToHomePage} /> : null}
-            {currentForm === 'register' ? <Register onFormSwitch={showLoginForm} goToHomePage={goToHomePage} /> : null}
-          </div>
-
+      <div className={`app-container ${currentTheme}`}>
+        <div className="logo-container">
+          <img src={logo} alt="Logo" />
         </div>
+        <div className="flex items-center justify-center h-screen">
+          <div className="homepage-container">
+            <div className="buttons-container">
+              <div className="centered-buttons">
+                <button className='custom-button'>Ellos</button>
+                <button className='custom-button'>Unisex</button>
+                <button className='custom-button'>Ellas</button>
+                <button className='custom-button'onClick={toggleTheme}>Cambiar Tema</button>
+              </div>
+              <img src={heart} alt="Heart" className="heart-icon" />
+              <button className='custom-button' onClick={showRegisterForm}>SIGN UP</button>
+              <button className='custom-button' onClick={showLoginForm}>LOGIN</button>
+            </div>
+          </div>
+        </div>
+        <div className='news-bar'>Discover What's New</div>
+        <div className="auth-form-container">
+          {currentForm === 'login' ? <Login onFormSwitch={showRegisterForm} goToHomePage={goToHomePage} /> : null}
+          {currentForm === 'register' ? <Register onFormSwitch={showLoginForm} goToHomePage={goToHomePage} /> : null}
+        </div>
+
       </div>
     </div>
+
   );
 }
 
